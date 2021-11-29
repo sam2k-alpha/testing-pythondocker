@@ -7,5 +7,5 @@ COPY . /var/www/html/testing-pythondocker
 WORKDIR /var/www/html/testing-pythondocker
 COPY ./requirements.txt /var/www/html/testing-pythondocker/requirements.txt
 RUN pip3 install -r requirements.txt
-EXPOSE 5000
-CMD ["python", "app.py"]
+ENTRYPOINT [ "python" ]
+CMD ["app.py"]
