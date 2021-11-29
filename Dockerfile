@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 FROM python:3.7-alpine
 RUN mkdir -p /var/www/html/testing-pythondocker
-COPY ./var/www/html/testing-pythondocker
+COPY . /var/www/html/testing-pythondocker
 WORKDIR /code
 ENV FLASK_APP=app.py
 ENV FLASK_RUN_HOST=0.0.0.0
