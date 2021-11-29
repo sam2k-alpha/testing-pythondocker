@@ -2,7 +2,7 @@
 FROM python:3.7-alpine
 RUN mkdir -p /var/www/html/testing-pythondocker
 COPY . /var/www/html/testing-pythondocker
-WORKDIR /code
+WORKDIR /var/www/html/testing-pythondocker
 ENV FLASK_APP=app.py
 ENV FLASK_RUN_HOST=0.0.0.0
 RUN apk add --no-cache gcc musl-dev linux-headers
